@@ -8,5 +8,11 @@
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
+    <welcome-file>login.html</welcome-file>
   </welcome-file-list>
+  
+  <context-param>
+  	<param-name>email</param-name>
+  	<param-value>xyz@gmail.com</param-value>
+  </context-param>
 </web-app>

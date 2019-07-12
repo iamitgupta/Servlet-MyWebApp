@@ -27,6 +27,7 @@ public class SearchServ extends HttpServlet{
 		User user=service.searchUser(Integer.parseInt(uid));
 		
 		if(user!=null){
+			req.getRequestDispatcher("./search.html").include(req, resp);
 			out.println("<h1 style=\"color:green\">"+user+"</h1>");
 		}else{
 			out.println("<h1 style=\"color:red\">No user found with id"+uid+"</h1>");

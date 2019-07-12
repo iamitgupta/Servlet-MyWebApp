@@ -30,6 +30,8 @@ public class UpdateServ extends HttpServlet{
 		
 		
 		if(update){
+			req.getRequestDispatcher("./updatePassword.html").include(req, resp);
+			
 			out.println("<h1 style=\"color:red\">Password Updated Successful</h1>");
 			
 		}else{

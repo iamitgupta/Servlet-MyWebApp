@@ -28,6 +28,8 @@ public class DeleteServ extends HttpServlet{
 		Boolean delete=service.deleteUser(Integer.parseInt(uid), password);
 		
 		if(delete){
+			req.getRequestDispatcher("./delete.html").include(req, resp);
+			
 			out.println("<h1 style=\"color:red\">Deleted Successful</h1>");
 			
 		}else{

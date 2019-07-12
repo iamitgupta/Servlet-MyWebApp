@@ -28,6 +28,7 @@ public class LoginServ extends HttpServlet{
 		User user=service.loginUser(Integer.parseInt(uid), password);
 		
 		if(user!=null){
+			req.getRequestDispatcher("./login.html").include(req, resp);
 			out.println("<h1 style=\"color:green\">Hello "+user.getFirstName()+" "+user.getLastName() +"</h1>");
 			out.println("<h1 style=\"color:red\">"+user+"</h1>");
 		}else{

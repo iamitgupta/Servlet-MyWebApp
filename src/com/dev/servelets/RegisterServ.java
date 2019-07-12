@@ -38,6 +38,8 @@ public class RegisterServ extends HttpServlet{
 		
 		Boolean reg=service.createProfile(user);
 		if(reg){
+			req.getRequestDispatcher("./register.html").include(req, resp);
+			
 			out.println("<h1 style=\"color:red\">Registration Successful</h1>");
 			//resp.sendRedirect("./login.html");
 			
